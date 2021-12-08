@@ -5,12 +5,14 @@
 </template>
 
 <script>
+import cookies from 'vue-cookies';
     export default {
         name: "button-one",
         methods: {
             click_button() {
                 this.$emit('button_clicked', "Button One Clicked!");
                 this.$refs['btn'].style.background = "pink";
+                cookies.remove("kanye_quote");
             },
             party_time() {
                 this.$refs['btn'].innerText = "Let's Party!";

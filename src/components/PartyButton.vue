@@ -12,6 +12,9 @@
                 this.$root.$emit('party_time');
             }
         },
+        mounted () {
+            this.$root.$on('party_time', this.party_time);
+        },
     }
 </script>
 
